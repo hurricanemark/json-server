@@ -1,0 +1,451 @@
+{
+    "projects":
+    [
+    {
+        "projectTitle": "Wicki Search",
+        "projectUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ableson.jpg",
+        "description": "Build a Wikipedia Viewer",
+        "objective": "Build a CodePen.io app that is functionally similar to this: https://codepen.io/freeCodeCamp/full/wGqEga/.",
+        "userStory": [
+            "You can search Wikipedia entries in a search box and see the resulting Wikipedia entries.",
+            "You can click a button to see a random Wikipedia entry."
+        ],
+        "hints": [
+            "Here's a URL you can use to get a random Wikipedia article: https://en.wikipedia.org/wiki/Special:Random.",
+            "Here's an entry on using Wikipedia's API: https://www.mediawiki.org/wiki/API:Main_page.",
+            "Use this link to experiment with Wikipedia's API."
+        ],
+        "note": "",
+        "status": "PRE-PLAN",
+        "engineers": [
+            "Mark Nguyen"
+        ],
+        "categories": [
+            "Open Source",
+            "freecodecamp.org"
+        ]
+    },
+    {
+        "projectTitle": "Twitch JSON API",
+        "projectUrl": "https://www.freecodecamp.org/learn/coding-interview-prep/take-home-projects/use-the-twitch-json-api",
+        "description": "Build a Twitch JSON API",
+        "objective": "Build a CodePen.io app that is functionally similar to this: https://codepen.io/freeCodeCamp/full/Myvqmo/.",
+        "userStory": [
+            "I can see whether freeCodeCamp is currently streaming on Twitch.tv.",
+            "I can click the status output and be sent directly to the freeCodeCamp's Twitch.tv channel.",
+            "If a Twitch user is currently streaming, I can see additional details about what they are streaming."
+        ],
+        "hints": [
+            "The relevant documentation about Twitch.tv's JSON API is here: https://dev.twitch.tv/docs/api/reference/#get-streams.",
+            "Here is an array of the Twitch.tv usernames of people who regularly stream: ['ESL_SC2', 'OgamingSC2', 'cretetion', 'freecodecamp', 'storbeck', 'habathcx', 'RobotCaleb', 'noobs2ninjas']"
+        ],
+        "note": "Due to a change in conditions on API usage, Twitch.tv requires an API key, but we've built a workaround. Use https://twitch-proxy.freecodecamp.rocks/ instead of Twitch's API base URL (i.e. https://api.twitch.tv/helix ) and you'll still be able to get account information, without needing to sign up for an API key.",
+        "status": "PRE-PLAN",
+        "engineers": [
+            "Mark Nguyen"
+        ],
+        "categories": [
+            "Open Source",
+            "freecodecamp.org"
+        ]
+    },
+    {
+        "projectTitle": "Image Search Abstraction Layer",
+        "projectUrl": "https://www.freecodecamp.org/learn/coding-interview-prep/take-home-projects/build-an-image-search-abstraction-layer",
+        "description": "Build a full stack JavaScript app that allows you to search for images like this: https://image-search-abstraction-layer.freecodecamp.rocks/query/lolcats%20funny?page=10 and browse recent search queries like this: https://image-search-abstraction-layer.freecodecamp.rocks/recent/. Use a site builder of your choice to complete the project.",
+        "objective": "",
+        "userStory": [
+            "You can get the image URLs, description and page URLs for a set of images relating to a given search string.",
+            "You can paginate through the responses by adding a ?page=2 parameter to the URL.",
+            "You can get a list of the most recently submitted search strings."
+        ],
+        "hints": [],
+        "note": "When you are done, make sure a working demo of your project is hosted somewhere public. Then submit the URL to it in the Solution Link field. Optionally, also submit a link to your project's source code in the GitHub Link field.",
+        "status": "PRE-PLAN",
+        "engineers": [
+            "Mark Nguyen"
+        ],
+        "categories": [
+            "Open Source",
+            "freecodecamp.org"
+        ]
+    },
+    {
+        "projectTitle": "Tic Tac Toe",
+        "projectUrl": "https://www.freecodecamp.org/learn/coding-interview-prep/take-home-projects/build-a-tic-tac-toe-game",
+        "description": "Build a CodePen.io app that is functionally similar to this: https://codepen.io/freeCodeCamp/full/KzXQgy/.",
+        "objective": "Build a Tic Tac Toe Game",
+        "userStory": [
+            "I can play a game of Tic Tac Toe with the computer.",
+            "My game will reset as soon as it's over so I can play again.",
+            "I can choose whether I want to play as X or O."
+        ],
+        "hints": [],
+        "note": "When you are finished, include a link to your project on CodePen and click the 'I've completed this challenge' button.",
+        "status": "PRE-PLAN",
+        "engineers": [
+            "Mark Nguyen"
+        ],
+        "categories": [
+            "Open Source",
+            "freecodecamp.org"
+        ]
+    },
+    {
+        "projectTitle": "Simon Game",
+        "projectUrl": "https://www.freecodecamp.org/learn/coding-interview-prep/take-home-projects/build-a-simon-game",
+        "description": "Build a CodePen.io app that is functionally similar to this: https://codepen.io/freeCodeCamp/full/obYBjE.",
+        "objective": "Build a Simon Game",
+        "userStory": [
+            "I am presented with a random series of button presses.",
+            "Each time I input a series of button presses correctly, I see the same series of button presses but with an additional step.",
+            "I hear a sound that corresponds to each button both when the series of button presses plays, and when I personally press a button.  If I press the wrong button, I am notified that I have done so, and that series of button presses starts again to remind me of the pattern so I can try again.   I can see how many steps are in the current series of button presses.  If I want to restart, I can hit a button to do so, and the game will return to a single step.  I can play in strict mode where if I get a button press wrong, it notifies me that I have done so, and the game restarts at a new random series of button presses.   I can win the game by getting a series of 20 steps correct. I am notified of my victory, then the game starts over."
+        ],
+        "hints": [
+            "Here are mp3s you can use for each button: https://s3.amazonaws.com/freecodecamp/simonSound1.mp3, https://s3.amazonaws.com/freecodecamp/simonSound2.mp3, https://s3.amazonaws.com/freecodecamp/simonSound3.mp3, https://s3.amazonaws.com/freecodecamp/simonSound4.mp3."
+        ],
+        "note": "When you are finished, include a link to your project on CodePen and click the 'I've completed this challenge' button.",
+        "status": "PRE-PLAN",
+        "engineers": [
+            "Mark Nguyen"
+        ],
+        "categories": [
+            "Open Source",
+            "freecodecamp.org"
+        ]
+    },
+    {
+        "projectTitle": "Forum Homepage",
+        "projectUrl": "https://www.freecodecamp.org/learn/coding-interview-prep/take-home-projects/build-a-freecodecamp-forum-homepage",
+        "description": "Build a CodePen.io app that is functionally similar to this: https://codepen.io/freeCodeCamp/full/JqdoMV.",
+        "objective": "Build a freeCodeCamp Forum Homepage",
+        "userStory": [
+            "I can see a list of the most recent posts on the freeCodeCamp forum.",
+            "For each topic, I can see the title and a list of links to users who have recently posted in it.",
+            "I can see the number of replies and views that each topic has had, and a timestamp of when the topic was last active."
+        ],
+        "hints": [
+            "To get the 30 most recent forum posts: https://forum-proxy.freecodecamp.rocks/latest."
+        ],
+        "note": "When you are finished, include a link to your project on CodePen and click the 'I've completed this challenge' button.",
+        "status": "PRE-PLAN",
+        "engineers": [
+            "Mark Nguyen"
+        ],
+        "categories": [
+            "Open Source",
+            "freecodecamp.org"
+        ]
+    },
+    {
+        "projectTitle": "Recipe Box",
+        "projectUrl": "https://www.freecodecamp.org/learn/coding-interview-prep/take-home-projects/build-a-recipe-box",
+        "description": "Build a CodePen.io app that is functionally similar to this: https://codepen.io/freeCodeCamp/full/dNVazZ/.",
+        "objective": "Build a Recipe Box",
+        "userStory": [
+            "I can create recipes that have names and ingredients.",
+            "I can see an index view where the names of all the recipes are visible.",
+            "I can click into any of those recipes to view it.  I can edit these recipes.   I can delete these recipes.  All new recipes I add are saved in my browser's local storage. If I refresh the page, these recipes will still be there."
+        ],
+        "hints": [
+            "You should prefix your local storage keys on CodePen, i.e. _username_recipes"
+        ],
+        "note": "When you are finished, include a link to your project on CodePen and click the I've completed this challenge' button.",
+        "status": "PRE-PLAN",
+        "engineers": [
+            "Mark Nguyen"
+        ],
+        "categories": [
+            "Open Source",
+            "freecodecamp.org"
+        ]
+    },
+    {
+        "projectTitle": "Game of Life",
+        "projectUrl": "https://www.freecodecamp.org/learn/coding-interview-prep/take-home-projects/build-the-game-of-life",
+        "description": "Build a CodePen.io app that is functionally similar to this: https://codepen.io/freeCodeCamp/full/BpwMZv/.",
+        "objective": "Build the Game of Life",
+        "userStory": [
+            "When I first arrive at the game, it will randomly generate a board and start playing.",
+            "Each time the board changes, I can see how many generations have gone by.",
+            "I can start and stop the board; can set up the board;  I can clear the board.  When I press start, the game will play out."
+        ],
+        "hints": [
+            "Here's an explanation of Conway's Game of Life from John Conway himself: https://www.youtube.com/watch?v=E8kUJL04ELA",
+            "Here's an overview of Conway's Game of Life with rules for your reference: https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life"
+        ],
+        "note": "When you are finished, include a link to your project on CodePen and click the 'I've completed this challenge' button.",
+        "status": "PRE-PLAN",
+        "engineers": [
+            "Mark Nguyen"
+        ],
+        "categories": [
+            "Open Source",
+            "freecodecamp.org"
+        ]
+    },
+    {
+        "projectTitle": "Roguelike Dungeon Crawler Game",
+        "projectUrl": "https://www.freecodecamp.org/learn/coding-interview-prep/take-home-projects/build-a-roguelike-dungeon-crawler-game",
+        "description": "Build a CodePen.io app that is functionally similar to this: https://codepen.io/freeCodeCamp/full/apLXEJ/.",
+        "objective": "Build a Roguelike Dungeon Crawler Game",
+        "userStory": [
+            "I have health, a level, and a weapon. I can pick up a better weapon. I can pick up health items.",
+            "All the items and enemies on the map are arranged at random.",
+            "I can move throughout a map, discovering items.  I can move anywhere within the map's boundaries, but I can't move through an enemy until I've beaten it.  Much of the map is hidden. When I take a step, all spaces that are within a certain number of spaces from me are revealed.",
+            "When I beat an enemy, the enemy goes away and I get XP, which eventually increases my level.",
+            "When I fight an enemy, we take turns damaging each other until one of us loses. I do damage based off of my level and my weapon. The enemy does damage based off of its level. Damage is somewhat random within a range.",
+            "When I find and beat the boss, I win.  The game should be challenging, but theoretically winnable."
+        ],
+        "hints": [],
+        "note": "When you are finished, include a link to your project on CodePen and click the 'I've completed this challenge' button.",
+        "status": "PRE-PLAN",
+        "engineers": [
+            "Mark Nguyen"
+        ],
+        "categories": [
+            "Open Source",
+            "freecodecamp.org"
+        ]
+    },
+    {
+        "projectTitle": "P2P Video Chat",
+        "projectUrl": "https://www.freecodecamp.org/learn/coding-interview-prep/take-home-projects/p2p-video-chat-application",
+        "description": "Build a Replit app that is functionally similar to this: https://p2p-video-chat-application.freecodecamp.rocks/.",
+        "objective": "Build a P2P Video Chat Application",
+        "userStory": [
+            "Upon arriving, the browser will prompt me to access my camera and microphone.",
+            "After I give it permission, I am prompted to type in a room name.",
+            "Once I type in the room name, a room will be created if no room of that name existed before.",
+            "A friend of mine can subsequently go to the same website, type in the same room I entered, and join the same room, then enter into a video chat with me.",
+            "If I type in a room name, and there are already two people in that room, I get a notification that the room is full.",
+            "Anyone can create or join any room. And there can be any number of rooms, but all of them must have unique names.",
+            "I can choose to not permit the site to access my microphone and webcam. If I choose not to do this, or if some other driver problem occurs, I see an error message saying these are required.",
+            "When I choose to cancel the room name input step, or if I type in no name, or just spaces, it should again ask me again to type in a valid room name.",
+            "If one of the two people in the room get disconnected, they can reconnect to the same room and continue chatting."
+        ],
+        "hints": [],
+        "note": "Once you've finished implementing these user stories, enter the URL to your live app and, optionally, your GitHub repository. Then click the 'I've completed this challenge' button.",
+        "status": "PRE-PLAN",
+        "engineers": [
+            "Mark Nguyen"
+        ],
+        "categories": [
+            "Open Source",
+            "freecodecamp.org"
+        ]
+    },
+    {
+        "projectTitle": "National Contiguity with a Force Directed Graph",
+        "projectUrl": "https://www.freecodecamp.org/learn/coding-interview-prep/take-home-projects/show-national-contiguity-with-a-force-directed-graph",
+        "description": "Build a CodePen.io app that is functionally similar to this: https://codepen.io/freeCodeCamp/full/xVopBo.",
+        "objective": "Show National Contiguity with a Force Directed Graph",
+        "userStory": [
+            "I can see a Force-directed Graph that shows which countries share borders.",
+            "I can see each country's flag on its node."
+        ],
+        "hints": [
+            "Here's a dataset you can use to build this: https://raw.githubusercontent.com/DealPete/forceDirected/master/countries.json",
+            "You can create a spritesheet of national flags at https://www.flag-sprites.com."
+        ],
+        "note": "When you are finished, include a link to your project on CodePen and click the 'I've completed this challenge' button.",
+        "status": "PRE-PLAN",
+        "engineers": [
+            "Mark Nguyen"
+        ],
+        "categories": [
+            "Open Source",
+            "freecodecamp.org"
+        ]
+    },
+    {
+        "projectTitle": "Map Data Across the Globe",
+        "projectUrl": "https://www.freecodecamp.org/learn/coding-interview-prep/take-home-projects/map-data-across-the-globe",
+        "description": "Build a CodePen.io app that is functionally similar to this: https://codepen.io/freeCodeCamp/full/mVEJag.",
+        "objective": "Map Data Across the Globe",
+        "userStory": [
+            "I can see where all Meteorites landed on a world map.",
+            " I can tell the relative size of the meteorite, just by looking at the way it's represented on the map.",
+            "I can mouse over the meteorite's data point for additional data."
+        ],
+        "hints": [
+            " Here's a dataset you can use to build this: https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/meteorite-strike-data.json"
+        ],
+        "note": "When you are finished, include a link to your project on CodePen and click the 'I've completed this challenge' button.",
+        "status": "PRE-PLAN",
+        "engineers": [
+            "Mark Nguyen"
+        ],
+        "categories": [
+            "Open Source",
+            "freecodecamp.org"
+        ]
+    },
+    {
+        "projectTitle": "Manage Book Trading Club",
+        "projectUrl": "https://www.freecodecamp.org/learn/coding-interview-prep/take-home-projects/manage-a-book-trading-club",
+        "description": "Build a Replit app that is functionally similar to this: https://manage-a-book-trading-club.freecodecamp.rocks/.",
+        "objective": "Manage a Book Trading Club",
+        "userStory": [
+            "I can view all books posted by every user.",
+            "I can add a new book.",
+            "I can update my settings to store my full name, city, and state.",
+            "I can propose a trade and wait for the other user to accept the trade."
+        ],
+        "hints": [],
+        "note": "When you are finished, include a link to your project on CodePen and click the 'I've completed this challenge' button.",
+        "status": "PRE-PLAN",
+        "engineers": [
+            "Mark Nguyen"
+        ],
+        "categories": [
+            "Open Source",
+            "freecodecamp.org"
+        ]
+    },
+    {
+        "projectTitle": "Pinterest Clone",
+        "projectUrl": "https://www.freecodecamp.org/learn/coding-interview-prep/take-home-projects/build-a-pinterest-clone",
+        "description": "Build a Replit app that is functionally similar to this: https://build-a-pinterest-clone.freecodecamp.rocks/.",
+        "objective": "Build a Pinterest Clone",
+        "userStory": [
+            "As an unauthenticated user, I can login with GitHub.",
+            "As an authenticated user, I can link to images.",
+            "As an authenticated user, I can delete images that I've linked to.",
+            "As an authenticated user, I can see a Pinterest-style wall of all the images I've linked to.",
+            "As an unauthenticated user, I can browse other users' walls of images.",
+            "As an authenticated user, if I upload an image that is broken, it will be replaced by a placeholder image. (can use jQuery broken image detection)"
+        ],
+        "hints": [
+            "Masonry.js is a library that allows for Pinterest-style image grids."
+        ],
+        "note": "When you are finished, include a link to your project on CodePen and click the 'I've completed this challenge' button.",
+        "status": "PRE-PLAN",
+        "engineers": [
+            "Mark Nguyen"
+        ],
+        "categories": [
+            "Open Source",
+            "freecodecamp.org"
+        ]
+    },
+    {
+        "projectTitle": "Nightlife Coordination App",
+        "projectUrl": "https://www.freecodecamp.org/learn/coding-interview-prep/take-home-projects/build-a-nightlife-coordination-app",
+        "description": "Build a full stack JavaScript app that is functionally similar to this: https://yoyo44.herokuapp.com/. Use a site builder of your choice to complete the project.",
+        "objective": "Build a Nightlife Coordination App",
+        "userStory": [
+            "As an unauthenticated user, you can view all bars in my area.",
+            "As an authenticated user, you can add myself to a bar to indicate you am going there tonight.",
+            "As an authenticated user, you can remove myself from a bar if you no longer want to go there.",
+            "As an unauthenticated user, when you login you should not have to search again."
+        ],
+        "hints": [
+            "Try using the Yelp API to find venues in the cities your users search for. If you use Yelp's API, be sure to mention so in your app."
+        ],
+        "note": "When you are done, make sure a working demo of your project is hosted somewhere public. Then submit the URL to it in the Solution Link field. Optionally, also submit a link to your project's source code in the GitHub Link field.",
+        "status": "PRE-PLAN",
+        "engineers": [
+            "Mark Nguyen"
+        ],
+        "categories": [
+            "Open Source",
+            "freecodecamp.org"
+        ]
+    },
+    {
+        "projectTitle": "Chart the Stock Market",
+        "projectUrl": "https://www.freecodecamp.org/learn/coding-interview-prep/take-home-projects/chart-the-stock-market",
+        "description": "Build a full stack JavaScript app that is functionally similar to this: https://chart-the-stock-market.freecodecamp.rocks/. Use a site builder of your choice to complete the project.",
+        "objective": "Chart the Stock Market",
+        "userStory": [
+            "You can view a graph displaying the recent trend lines for each added stock.",
+            "You can add new stocks by their symbol name.",
+            "You can remove stocks.",
+            "You can see changes in real-time when any other user adds or removes a stock. For this you will need to use Web Sockets."
+        ],
+        "hints": [],
+        "note": "When you are done, make sure a working demo of your project is hosted somewhere public. Then submit the URL to it in the Solution Link field. Optionally, also submit a link to your project's source code in the GitHub Link field.",
+        "status": "PRE-PLAN",
+        "engineers": [
+            "Mark Nguyen"
+        ],
+        "categories": [
+            "Open Source",
+            "freecodecamp.org"
+        ]
+    },
+    {
+        "projectTitle": "Voting App",
+        "projectUrl": "https://www.freecodecamp.org/learn/coding-interview-prep/take-home-projects/build-a-voting-app",
+        "description": "Build a full stack JavaScript app that is functionally similar to this: https://voting-app.freecodecamp.rocks/. Use a site builder of your choice to complete the project.",
+        "objective": "Build a Voting App",
+        "userStory": [
+            "As an authenticated user, you can keep my polls and come back later to access them.",
+            "As an authenticated user, you can share my polls with my friends.",
+            "As an authenticated user, you can see the aggregate results of my polls.",
+            "As an authenticated user, you can delete polls that I decide I don't want anymore.",
+            "As an authenticated user, you can create a poll with any number of possible items.",
+            "As an unauthenticated or authenticated user, you can see and vote on everyone's polls.",
+            "As an unauthenticated or authenticated user, you can see the results of polls in chart form. (This could be implemented using Chart.js or Google Charts.)",
+            "As an authenticated user, if you don't like the options on a poll, you can create a new option."
+        ],
+        "hints": [],
+        "note": "When you are done, make sure a working demo of your project is hosted somewhere public. Then submit the URL to it in the Solution Link field. Optionally, also submit a link to your project's source code in the GitHub Link field.",
+        "status": "PRE-PLAN",
+        "engineers": [
+            "Mark Nguyen"
+        ],
+        "categories": [
+            "Open Source",
+            "freecodecamp.org"
+        ]
+    },
+    {
+        "projectTitle": "Pong Game",
+        "projectUrl": "https://www.freecodecamp.org/learn/coding-interview-prep/take-home-projects/build-a-pong-game",
+        "description": "Build a CodePen.io app that is functionally similar to this: https://codepen.io/satyamdev/full/pdMmBp.",
+        "objective": "Build a Pong Game",
+        "userStory": [
+            "I can control a paddle.",
+            "The computer can control the other paddle.",
+            "The computer's paddle is unbeatable. It should never miss the ball.",
+            "The game keeps track of the player and computer's score."
+        ],
+        "hints": [],
+        "note": "When you are finished, include a link to your project on CodePen and click the 'I've completed this challenge' button.",
+        "status": "PRE-PLAN",
+        "engineers": [
+            "Mark Nguyen"
+        ],
+        "categories": [
+            "Open Source",
+            "freecodecamp.org"
+        ]
+    },
+    {
+        "projectTitle": "Light-Bright App",
+        "projectUrl": "https://www.freecodecamp.org/learn/coding-interview-prep/take-home-projects/build-a-light-bright-app",
+        "description": "Build a CodePen.io app that is functionally similar to this: https://codepen.io/freeCodeCamp/full/eyLYXE.",
+        "objective": "Build a Light-Bright App",
+        "userStory": [
+            "I can click or drag the mouse cursor to color the circles.",
+            "I can double-click on a colored circle to remove the color.",
+            "I can click on a colored circle to change its color.",
+            "I should get a circle of different color on each click.",
+            "I can click on the 'Reset' button to remove the recent color.",
+            "I can click on the 'Reset All' button to remove all the colors from the circles."
+        ],
+        "hints": [],
+        "note": "When you are finished, include a link to your project on CodePen and click the 'I've completed this challenge' button.",
+        "status": "PRE-PLAN",
+        "engineers": [
+            "Mark Nguyen"
+        ],
+        "categories": [
+            "Open Source",
+            "freecodecamp.org"
+        ]
+    }
+]
+}

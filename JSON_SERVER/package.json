@@ -1,0 +1,14 @@
+{
+  "name": "json-server",
+  "version": "1.0.0",
+  "description": "json-server on multiple json files via index.js",
+  "main": "json_index.js",
+  "scripts": {
+    "test": "json-server --watch ./json_index.js"
+  },
+  "author": "Mark Nguyen",
+  "license": "ISC",
+  "devDependencies": {
+    "json-server": "^0.17.2"
+  }
+}

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart JS</title>
+</head>
+<body>
+    <!-- <div class="chart-container" style="position: relative; height:40vh; width:80vw"><canvas id="airquality"></canvas></div> -->
+    <div style="height: 100%; width: 100%"><canvas id="airquality"></canvas></div>
+    <button type="submit" id="chart_it">AirQuality chart</button>
+    <br />
+    <hr>
+    <div style="height: 100%; width: 100%"><canvas id="weatherforecast"></canvas></div>
+    <br />
+    <button type="submit" id="chart_forecast">Forecast chart</button>
+    <br>
+    <script type="javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script type="text/javascript">
+
+    function get_all_data(url) {
+        // 1. Create a new XMLHttpRequest object
+        let xhr = new XMLHttpRequest();
+
+        // 2. Configure it: GET-request for the URL /article/.../load
+        xhr.open('GET', url, false);
+
+        try {
+            xhr.send();
+            if (xhr.status != 200) {
+                alert(`Error ${xhr.status}: ${xhr.statusText}`);
+            } else {
+                return JSON.parse(xhr.response);
+            }
+        } catch(err) { // instead of onerror
+            alert("Request failed");
+        }    
+    }
+    
+
+    function chart_air_quality() {
+        let uri = 'http://localhost:3000/AirQuality';
+        let air_quality = get_all_data(uri);
+
+
+        // alert(JSON.stringify(air_quality.ozone));
+
+        const d = new Date();
+        let daystr = d.toDateString().slice(0,15);
+        let text = d.toTimeString().slice(0,2);
+        let hr = parseInt(text, 10);
+        let labels = [];
+        for (let i=hr; i<25; i++){
+            labels.push(i.toString() + ':00');
+        }
+
+        // alert(labels);
+
+        const backgroundColors = [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(255, 159, 64, 0.2)',
+            'rgba(255, 205, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(201, 203, 207, 0.2)'
+        ];
+        const borderColors = [
+            'rgb(255, 99, 132)',
+            'rgb(255, 159, 64)',
+            'rgb(255, 205, 86)',
+            'rgb(75, 192, 192)',
+            'rgb(54, 162, 235)',
+            'rgb(153, 102, 255)',
+            'rgb(201, 203, 207)'
+        ];
+
+        const chdata = {
+        labels: labels,
+        datasets: [
+        {
+            label: 'AEROSOL(μg/m³)',
+            data: air_quality.aerosol_optical_depth.slice(hr-1, hr+7),
+            fill: false,
+            borderColor: borderColors,
+            backgroundColor: backgroundColors,
+            borderWidth: 1
+            },
+            {
+            label: 'UV-INDEX',
+            data: air_quality.uv_index.slice(hr-1, hr+7),
+            fill: false,
+            borderColor: borderColors,
+            backgroundColor: backgroundColors,
+            borderWidth: 1
+            },
+            {
+            label: 'OZONE(μg/m³)',
+            data: air_quality.ozone.slice(hr-1, hr+7),
+            borderColor: borderColors,
+            backgroundColor: backgroundColors,
+            borderWidth: 1,
+            fill: false,
+            },
+            {
+            label: 'DUST(μg/m³)',
+            data: air_quality.dust.slice(hr-1, hr+7),
+            borderColor: borderColors,
+            backgroundColor: backgroundColors,
+            borderWidth: 1,
+            fill: false,
+            },
+            {
+            label: 'CARBON_MONOXIDE(μg/m³)',
+            data: air_quality.carbon_monoxide.slice(hr-1, hr+7),
+            borderColor: borderColors,
+            backgroundColor: backgroundColors,
+            borderColor: borderColors,
+            backgroundColor: backgroundColors,
+            borderWidth: 1,
+            fill: false,
+            }                          
+        ]
+        };
+
+        new Chart(
+        document.getElementById('airquality').getContext('2d'),
+        {
+            type: 'line',
+            options: {
+                responsive: true,
+                plugins: {
+                title: {
+                    display: true,
+                    text: 'Air Quality in Fremont, CA - ' + daystr 
+                },
+                },
+                interaction: {
+                mode: 'index',
+                intersect: false
+                },
+                scales: {
+                x: {
+                    display: true,
+                    title: {
+                    display: true,
+                    text: 'Hourly'
+                    }
+                },
+                y: {
+                    display: true,
+                    title: {
+                    display: true,
+                    text: 'μg/m³'
+                    }
+                }
+                }
+            },
+            data: chdata,
+        }
+    );
+
+    }
+    
+
+    function chart_current_weather() {
+        let uri = 'http://localhost:3000/WeatherForecast';
+        let weather_forecast = get_all_data(uri);
+
+        // alert(JSON.stringify(weather_forecast.temperature_2m));
+        const d = new Date();
+        let daystr = d.toDateString().slice(0,15);
+        let text = d.toTimeString().slice(0,2);
+        let hr = parseInt(text, 10);
+        let labels = [];
+        for (let i=hr; i<25; i++){
+            labels.push(i.toString() + ':00');
+        }
+
+        let midnight_hr = 1;
+        for (let i=labels.length; i < 12; i++) {
+            labels.push(midnight_hr.toString() + ':00');
+            midnight_hr++;
+        }
+        // alert(labels);
+
+        const backgroundColors = [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(255, 159, 64, 0.2)',
+            'rgba(255, 205, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(201, 203, 207, 0.2)'
+        ];
+        const borderColors = [
+            'rgb(255, 99, 132)',
+            'rgb(255, 159, 64)',
+            'rgb(255, 205, 86)',
+            'rgb(75, 192, 192)',
+            'rgb(54, 162, 235)',
+            'rgb(153, 102, 255)',
+            'rgb(201, 203, 207)'
+        ];
+
+        const chdata = {
+        labels: labels,
+        datasets: [
+        {
+            label: 'TEMPERATURE(°F)',
+            data: weather_forecast.temperature_2m.slice(hr-1, hr+11),
+            fill: true,
+            borderColor: borderColors,
+            backgroundColor: backgroundColors,
+            borderWidth: 1
+            },
+            {
+            label: 'FEELS-LIKE(°F)',
+            data: weather_forecast.apparent_temperature.slice(hr-1, hr+11),
+            fill: true,
+            borderColor: borderColors,
+            backgroundColor: backgroundColors,
+            borderWidth: 1
+            }
+            // ,
+            // {
+            // label: 'RAIN',
+            // data: weather_forecast.rain.slice(hr-1, hr+11),
+            // borderColor: borderColors,
+            // backgroundColor: backgroundColors,
+            // borderWidth: 1,
+            // fill: false,
+            // },
+            // {
+            // label: 'SHOWERS',
+            // data: weather_forecast.showers.slice(hr-1, hr+11),
+            // borderColor: borderColors,
+            // backgroundColor: backgroundColors,
+            // borderWidth: 1,
+            // fill: false,
+            // },
+            // {
+            // label: 'SNOW',
+            // data: weather_forecast.snow_depth.slice(hr-1, hr+11),
+            // borderColor: borderColors,
+            // backgroundColor: backgroundColors,
+            // borderWidth: 1,
+            // fill: false,
+            // }
+                                     
+        ]
+        };
+
+        new Chart(
+        document.getElementById('weatherforecast').getContext('2d'),
+        {
+            type: 'line',
+            options: {
+                responsive: true,
+                plugins: {
+                title: {
+                    display: true,
+                    text: 'Current Forecast for Fremont, CA - ' + daystr
+                },
+                },
+                interaction: {
+                mode: 'index',
+                intersect: false
+                },
+                scales: {
+                x: {
+                    display: true,
+                    title: {
+                    display: true,
+                    text: 'Hourly'
+                    }
+                },
+                y: {
+                    display: true,
+                    title: {
+                    display: true,
+                    text: '°F'
+                    }
+                }
+                }
+            },
+            data: chdata,
+        }
+    );        
+    }
+
+    document.getElementById('chart_forecast').addEventListener('click', chart_current_weather);
+
+    document.getElementById('chart_it').addEventListener('click', chart_air_quality);
+
+    
+</script>
+</body>
+</html>
