@@ -23,7 +23,9 @@ Run `npm i json-server` to install or update.
 
 ## Setting up the backend ##
 
-<strong>1.  Create a file named `air-quality.json`</strong>
+<strong>1.  Create a directory `JSON_SERVER`</strong>
+
+<strong>2.  Create a file named `air-quality.json`</strong>
 with content of a twenty-four hour datapoints.  
 
 ```json
@@ -43,7 +45,7 @@ with content of a twenty-four hour datapoints.
 ```
 
 
-<strong>2.  Create another file `weather.json`</strong> with content of a twenty-four hour of weather datapoints.
+<strong>3.  Create another file `weather.json`</strong> with content of a twenty-four hour of weather datapoints.
 
 ```json
 {
