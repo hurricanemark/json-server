@@ -291,11 +291,15 @@
     );        
     }
 
-    document.getElementById('chart_forecast').addEventListener('click', chart_current_weather);
+    document.getElementById('chart_forecast').addEventListener('DOMContentLoaded', chart_current_weather);
 
-    document.getElementById('chart_it').addEventListener('click', chart_air_quality);
+    document.getElementById('chart_it').addEventListener('DOMContentLoaded', chart_air_quality);
 
-    
+    document.addEventListener("DOMContentLoaded", () => {
+        console.log("Hello World!");
+        chart_air_quality();
+        chart_current_weather();
+    });
 </script>
 </body>
 </html>
