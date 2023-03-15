@@ -91,6 +91,7 @@ Access the backend URI: http://localhost:3000
 ![GET](./public/json-server-img.jpg)
 
 <hr>
+
 ## Frontend development
 
 For simplicity, we will use the development server, `parcel` to test and build the frontend app.
