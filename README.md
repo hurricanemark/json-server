@@ -111,7 +111,9 @@ npm install --save-dev parcel
 
 Interface `chart.js` (see [reference](https://www.chartjs.org/docs/latest/samples/information.html)).
 
-Note, do not use <em>`synchronous XMLHttpRequest`</em> method in your production code.
+For proof of concept, I cramped everything into index.html file.
+
+For best practice, do not use <em>`synchronous XMLHttpRequest`</em> method in your production code.  Also, split your scripts into separate file.
 
 <strong>4. Run</strong> 
 ```javascript
