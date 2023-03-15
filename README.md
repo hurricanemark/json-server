@@ -2,9 +2,9 @@
 
 Let assume you have created a git branch to work on an assigned feature.  We will skip that and jump right into this topic of subtask development. 
 
-There are two servers in this repo.  `JSON_SERVER` and `CHARTS`.
+There are two separate code bases in this repo.  `JSON_SERVER` and `CHARTS`.
 
-The first is a simplified backend server and the second is a browser app.
+The first is a simplified backend server and the second is a browser (client) app.
 
 Often, engineering tasks are broken into subtasks.  A subtask small enough that the engineer can quickly setup an ecosystem for it.  
 
