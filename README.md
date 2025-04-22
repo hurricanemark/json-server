@@ -2,6 +2,8 @@
 
 Let's assume you have created a git branch to work on an assigned feature.  We will skip that and jump right into this topic of subtask development. 
 
+Your substask is to consume data return from some API calls.  The returned data is in JSON format.
+
 There are two separate code bases in this repo.  `JSON_SERVER` and `CHARTS`.
 
 The first is a simplified backend server and the second is a browser (client) app.
