@@ -1,12 +1,12 @@
 # How Developers Done It
 
-Let assume you have created a git branch to work on an assigned feature.  We will skip that and jump right into this topic of subtask development. 
+Let's assume you have created a git branch to work on an assigned feature.  We will skip that and jump right into this topic of subtask development. 
 
 There are two separate code bases in this repo.  `JSON_SERVER` and `CHARTS`.
 
 The first is a simplified backend server and the second is a browser (client) app.
 
-Often, engineering tasks are broken into subtasks.  A subtask small enough that the engineer can quickly setup an ecosystem for it.  
+Often, engineering tasks are broken into subtasks.  Each subtask should be small enough that the engineer can quickly setup an ecosystem for it.  
 
 This is a development senario where the engineer is tasked with developing the front-end, interfacing the `chart.js` library.  She needs real-time sample datapoints for the charts.  
 
